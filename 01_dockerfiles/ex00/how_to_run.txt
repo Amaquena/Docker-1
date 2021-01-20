@@ -1,0 +1,5 @@
+# Create image
+docker build -t ex00 .
+
+# Run container
+winpty docker run -it ex00

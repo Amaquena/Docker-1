@@ -1,0 +1,8 @@
+# Create 1st image
+docker build -t ft-rails:on-build -f setup/Dockerfile .
+
+# Create 2nd image
+docker build -t run-rails .
+
+# Run container
+winpty docker run -d --name ft-rails -it -p 3000:3000 run-rails

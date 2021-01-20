@@ -1,0 +1,12 @@
+# Create image
+docker build -t ex01 .
+
+# Run teamspeak server
+docker run -d --name teamspeak --rm -p 9987:9987/udp -p 10011:10011 -p 30033:30033 ex01
+
+# run 'docker logs teamspeak' to get the virtual server port and privilege key
+# run '$(docker-machine ip Char)' to get ip
+# Start teamspeak client
+# click the connections tab, then connect
+# put in the ip with the port and the privilage key
+# click connect to finish
